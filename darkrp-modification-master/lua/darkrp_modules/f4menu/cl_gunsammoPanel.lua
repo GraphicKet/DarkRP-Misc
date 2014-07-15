@@ -133,7 +133,7 @@ function CreateGunsAmmoPanel(frame)
 		end
 		buy.DoClick = function()
 			frame:Close();
-			RunConsoleCommand("DarkRP", "buyammo", k);
+			RunConsoleCommand("DarkRP", "buyammo", i);
 		end
 		
 		local cost = v.price;
