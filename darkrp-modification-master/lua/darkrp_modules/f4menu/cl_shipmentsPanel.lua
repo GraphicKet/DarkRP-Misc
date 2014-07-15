@@ -82,7 +82,7 @@ function CreateShipPanel(frame)
 		end
 		buy.DoClick = function()
 			frame:Close();
-			RunConsoleCommand("DarkRP", v.cmd);
+			RunConsoleCommand("DarkRP", "buyshipment", v.name);
 		end
 		
 		local cost = v.price;
