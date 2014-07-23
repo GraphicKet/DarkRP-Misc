@@ -33,9 +33,9 @@ function CreateShipPanel(frame)
 	entScroll:GetVBar().btnDown.Paint = function() draw.RoundedBox(0, 0, 0, entScroll:GetVBar().btnDown:GetWide(), entScroll:GetVBar().btnDown:GetTall(), colors.barupdown) end
 	entScroll:GetVBar().btnGrip.Paint = function(w, h) draw.RoundedBox(0, 0, 0, entScroll:GetVBar().btnGrip:GetWide(), entScroll:GetVBar().btnGrip:GetTall(), colors.bar) end
 	
-	local shipments = fn.Filter(fn.Compose{fn.Not, fn.Curry(fn.GetValue, 2)("noship")}, CustomShipments)
+	
 	local count = 0;
-	for i, v in pairs(shipments) do
+	for i, v in pairs(CustomShipments) do
 		local item = vgui.Create("DButton", entScroll);
 		item:SetSize(entScroll:GetWide(), 50);
 		item:SetPos(0, count * 55);
